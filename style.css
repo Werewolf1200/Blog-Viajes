@@ -41,7 +41,12 @@ p {
 .contenedor {
     max-width: 1200px;
     margin: 0 auto;
-    overflow: auto;
+}
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
 }
 
 
@@ -64,7 +69,6 @@ p {
  @media (min-width: 768px) {
     .navegacion-principal a {
     display: inline-block;
-    margin-right: 20px;
     }
  }
 
@@ -88,7 +92,6 @@ p {
         width: 70%;
         float: left;
         padding-right: 0 60px 0 0;
-        margin-top: 40px;
     } 
 }
 
@@ -97,6 +100,7 @@ p {
     width: 30%;
     float: left;
     padding:0;
+    margin-top: 40px;
 }
 
 /******** Entradas de Blog *************/
@@ -107,11 +111,11 @@ h2 {
 }
 
 .entrada {
-    margin-bottom: 60px;
+    margin-top: 60px;
 }
 
 .entrada:last-of-type { 
-    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .entrada img {
@@ -139,7 +143,7 @@ h2 {
 }
 
 .sidebar ul li {
-   margin-bottom: 20px;
+   margin-bottom: 10px;
 }
 
 .sidebar ul li:hover {
@@ -154,4 +158,48 @@ h2 {
 
 .sidebar ul li:hover a {
     color: white;
+}
+
+.footer-sitio {
+    background-color: #DB008D;
+    padding-top: 40px;
+    margin-top: 60px;
+    color: white;
+    text-align: center;
+}
+
+.footer-sitio h2 {
+    color: white;
+}
+
+.footer-sitio a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 20px;
+
+}
+
+.footer-sitio a:last-of-type {
+    margin-right: 0;
+}
+
+@media (min-width: 768px) {
+    .footer-sitio .nosotros {
+        float: left;
+        width: 30%;
+        text-align: left;
+    } 
+
+    .footer-sitio .menu {
+        float: right;
+        width: 50%;
+        text-align: right;
+    }
+}
+
+.copyright {
+    background-color: #b10474;
+    margin: 50px 0 0 0;
+    padding: 20px 0;
 }
